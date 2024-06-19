@@ -1,43 +1,48 @@
 import routes from "../../constants/routes";
 
-
 export interface MenuItem {
   label: string;
-  path: string;
+  route: string;
   subItems?: MenuItem[];
 }
 
 const menuData: MenuItem[] = [
   {
     label: "Home",
-    path: routes.HOME,
+    route: routes.HOME,
   },
   {
     label: "About Us",
-    path: routes.ABOUT,
+    route: routes.ABOUT,
     subItems: [
-      { label: "Company History", path: routes.ABOUT_COMPANY_HISTORY },
-      { label: "Board of Directors", path: routes.ABOUT_BOARD_OF_DIRECTORS },
-      { label: "Managements and Staffs", path: routes.ABOUT_MANAGEMENT_STAFFS },
-      { label: "Photo Gallery", path: routes.ABOUT_PHOTO_GALLERY },
+      { label: "Company History", route: routes.ABOUT_COMPANY_HISTORY },
+      { label: "Board of Directors", route: routes.ABOUT_BOARD_OF_DIRECTORS },
+      {
+        label: "Managements and Staffs",
+        route: routes.ABOUT_MANAGEMENT_STAFFS,
+      },
+      { label: "Photo Gallery", route: routes.ABOUT_PHOTO_GALLERY },
     ],
   },
   {
     label: "Services",
-    path: routes.SERVICES,
+    route: routes.SERVICES,
     subItems: [
-      { label: "Customer Information", path: routes.SERVICES_CUSTOMER_INFORMATION },
-      { label: "FAQs & Electric Saving", path: routes.SERVICES_FAQS },
-      { label: "Generation Rates", path: routes.SERVICES_GENERATION_RATES },
+      {
+        label: "Customer Information",
+        route: routes.SERVICES_CUSTOMER_INFORMATION,
+      },
+      { label: "FAQs & Electric Saving", route: routes.SERVICES_FAQS },
+      { label: "Generation Rates", route: routes.SERVICES_GENERATION_RATES },
     ],
   },
   {
     label: "News & Events",
-    path: routes.NEWS,
+    route: routes.NEWS,
   },
   {
     label: "Contact Us",
-    path: routes.CONTACT,
+    route: routes.CONTACT,
   },
 ];
 

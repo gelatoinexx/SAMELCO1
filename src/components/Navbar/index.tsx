@@ -4,14 +4,14 @@ import { Images } from "../../assets";
 import menuData, { MenuItem } from "../MenuItemsData";
 
 interface NavLinkProps {
-  path: string;
+ route: string;
   label: string;
   toggleMenu?: () => void;
   children?: React.ReactNode;
 }
 
 const NavLink = (props:NavLinkProps) => {
-  const { path, label, toggleMenu, children } = props;
+  const {route, label, toggleMenu, children } = props;
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,7 +24,7 @@ const NavLink = (props:NavLinkProps) => {
   return (
     <div className="relative">
       <RouterNavLink
-        to={path}
+        to={route}
         onClick={handleMenuClose}
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
@@ -38,7 +38,7 @@ const NavLink = (props:NavLinkProps) => {
       </RouterNavLink>
       {isOpen && children && (
         <div
-          className="absolute z-10 left-0 mt-1 bg-white shadow-lg rounded-md border-b-3 border-accent-500"
+          className="relative mb-3 bg-accent-100 lg:absolute -z-1 left-0  lg:bg-white lg:shadow-lg rounded-md lg:border-b-3 lg:border-accent-500  lg:w-[12rem]  w-full "
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
         >
@@ -62,12 +62,12 @@ export default function Navbar() {
     return items.map((item) => (
       <NavLink
         key={item.label}
-        path={item.path}
+       route={item.route}
         label={item.label}
         toggleMenu={toggleMenu}
       >
         {item.subItems && (
-          <div className="space-y-4 p-1 w-[12rem] ">
+          <div className="space-y-4 p-1 lg:w-[12rem]  w-full ">
             {renderMenuItems(item.subItems, toggleMenu)}
           </div>
         )}

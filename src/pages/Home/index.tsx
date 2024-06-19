@@ -5,6 +5,7 @@ import HistorySection from "./HistorySection";
 import Navbar from "../../components/Navbar";
 import OurFocusSection from "./OurFocusSection";
 import ScrollToTopButton from "../../components/ScrollToTopButton";
+import Footer from "../../components/Footer";
 
 export default function HomePage() {
   return (
@@ -19,6 +20,8 @@ export default function HomePage() {
       <CustomerServiceSection />
 
       <ElecTrackOverviewPage />
+
+      <Footer />
 
       <ScrollToTopButton />
     </div>

@@ -2,8 +2,17 @@ import { Images } from "../../../assets";
 import LandingHeaderTitle from "../../../components/LandingHeaderTItle";
 import { InformationCircleIcon } from "@heroicons/react/24/solid";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router-dom";
+import Button from "../../../components/Button";
+import routes from "../../../constants/routes";
 
 export default function HistorySection() {
+  const navigate = useNavigate();
+
+  const handleHistoryButtonClick = () => {
+    navigate({ pathname: routes.ABOUT });
+  };
+
   return (
     <div className="relative w-full px-0 lg:px-0 mb-15">
       <img
@@ -45,7 +54,7 @@ export default function HistorySection() {
               Its initial membership numbered 800 members, all coming from the
               defunct Calbayog Electric Plant, whose system was taken over by
               the newly organized electric cooperative created under RA 6038 as
-              amended by PD 269. It has two (2) units of CAT fuel-run generators
+              amended by PD 269. It has two 2 units of CAT fuel-run generators
               at its power plant in Brgy. Capoocan, Calbayog City, as the sole
               source of power supply. During these periods, SAMELCO I offices
               were housed on a 0.6-hectare lot in Brgy. Capoocan is where the
@@ -57,10 +66,13 @@ export default function HistorySection() {
             </p>
 
             <div className="">
-              <button className="bg-primary-500 hover:bg-accent-600 text-white py-3 md:py-4 px-8 md:w-1/2 rounded-3xl text-xl md:mr-4 mb-4 flex justify-center">
-                <span>See More</span>
-                <ArrowLongRightIcon className="ml-5 h-6 w-6 text-white" />
-              </button>
+              <Button
+                text="See More"
+                variant="primary"
+                icon={<ArrowLongRightIcon className="h-6 w-6 text-white" />}
+                onClick={handleHistoryButtonClick}
+                className="md:py-4 md:w-1/2 text-xl"
+              />
             </div>
           </div>
         </div>

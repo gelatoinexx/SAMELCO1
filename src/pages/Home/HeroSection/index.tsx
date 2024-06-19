@@ -1,6 +1,19 @@
 import { Images } from "../../../assets";
+import Button from "../../../components/Button";
+import { useNavigate } from "react-router-dom";
+import routes from "../../../constants/routes";
 
 export default function () {
+  const navigate = useNavigate();
+
+  const navigateToServicesPage = () => {
+    navigate({ pathname: routes.SERVICES });
+  };
+
+  const navigateToAboutUsPage = () => {
+    navigate({ pathname: routes.ABOUT });
+  };
+
   return (
     <div className="relative px-4 md:px-8 mb-12">
       <div className="relative bg-accent-100 rounded-b-3xl lg:rounded-bl-4xl pb-10 py-3 px-8">
@@ -23,12 +36,16 @@ export default function () {
               Stronger, Brighter Tomorrow.
             </p>
             <div className="flex flex-col md:flex-row">
-              <button className="bg-primary-500 hover:bg-accent-600  text-white py-3 px-8 rounded-3xl text-lg md:mr-4 mb-4 ">
-                Our Services
-              </button>
-              <button className="bg-white border-2 border-primary-500 text-primary-500  hover:bg-accent-500 hover:border-accent-500 hover:text-white py-3 px-8 rounded-3xl text-lg  md:mr-4 mb-4">
-                Explore More
-              </button>
+              <Button
+                text="Our Services"
+                variant="primary"
+                onClick={navigateToServicesPage}
+              />
+              <Button
+                text="Explore more"
+                variant="secondary"
+                onClick={navigateToAboutUsPage}
+              />
             </div>
           </div>
           <div className="md:w-1/2 justify-center block md:flex  mt-5 items-center">
