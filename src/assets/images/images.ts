@@ -18,6 +18,7 @@ import backgroundImage from "./background_image.png"
 import historySectionBg from "./history_section_bg.png"
 import logo from "./logo.svg"
 import samelcoPic from "./samelco_pic.png"
+import samelcoLogo2 from "./samelco_logo2.svg"
 
 const Images = {
   Doe: doe,
@@ -38,7 +39,8 @@ const Images = {
   BackgroundImage: backgroundImage,
   HistorySectionBg: historySectionBg,
   Logo: logo,
-  SamelcoPic: samelcoPic
+  SamelcoPic: samelcoPic,
+  SamelcoLogo2: samelcoLogo2
 };
 
 export default Images;
