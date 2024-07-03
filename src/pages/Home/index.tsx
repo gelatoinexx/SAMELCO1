@@ -19,7 +19,9 @@ export default function HomePage() {
 
       <CustomerServiceSection />
 
+      <div className="mb-12">
       <ElecTrackOverviewPage />
+      </div>
 
       <Footer />
 

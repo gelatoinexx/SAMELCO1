@@ -1,4 +1,4 @@
-import routes from "../../constants/routes";
+import routes from "../../resources/constants/routes";
 
 export interface MenuItem {
   label: string;

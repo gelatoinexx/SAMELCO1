@@ -11,7 +11,7 @@ import BoardOfDirectors from "./pages/AboutUs/BoardOfDirectors";
 import CompanyHistory from "./pages/AboutUs/CompanyHistory";
 import ManagementStaffs from "./pages/AboutUs/Management&Staffs";
 import PhotoGallery from "./pages/AboutUs/PhotoGallery";
-import routes from "./constants/routes";
+import routes from "./resources/constants/routes";
 
 function App() {
   return (
