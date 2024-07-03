@@ -4,7 +4,7 @@ import { InformationCircleIcon } from "@heroicons/react/24/solid";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 import Button from "../../../components/Button";
-import routes from "../../../constants/routes";
+import routes from "../../../resources/constants/routes";
 
 export default function HistorySection() {
   const navigate = useNavigate();

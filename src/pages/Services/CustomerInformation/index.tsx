@@ -1,3 +1,4 @@
+import Footer from "../../../components/Footer";
 import Navbar from "../../../components/Navbar";
 
 export default function CustomerInformation(){
@@ -5,6 +6,8 @@ export default function CustomerInformation(){
         <div>
             <Navbar />
             <h1>cUSTOMER INFO</h1>
+
+            <Footer />
         </div>
     )
 }

@@ -83,7 +83,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="bg-accent-500 text-black text-sm md:text-lg font-semi-bold p-2 md:p-5 w-full text-left">
+        <div className="bg-accent-500 text-black text-sm md:text-md font-semi-bold p-2 md:p-5 w-full text-left">
           <p>
             Copyright © 2024 Samar 1 Electric Cooperative, Inc. All rights
             reserved.

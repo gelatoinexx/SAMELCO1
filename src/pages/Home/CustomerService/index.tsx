@@ -9,7 +9,7 @@ import {
   UserCheck,
 } from "@phosphor-icons/react";
 import { useNavigate } from "react-router-dom";
-import routes from "../../../constants/routes";
+import routes from "../../../resources/constants/routes";
 
 export default function CustomerServiceSection() {
   const ListOfCustomerServices = [

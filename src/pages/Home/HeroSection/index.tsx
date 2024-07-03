@@ -1,7 +1,7 @@
 import { Images } from "../../../assets";
 import Button from "../../../components/Button";
 import { useNavigate } from "react-router-dom";
-import routes from "../../../constants/routes";
+import routes from "../../../resources/constants/routes";
 
 export default function () {
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ export default function () {
         />
         <div className="relative container mx-auto flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mt-8 lg:mt-0">
-            <h1 className="text-4xl md:text-6xl font-bold text-primary-500 mb-2">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary-500 mb-2">
               SAMELCO I
             </h1>
             <h2 className="text-2xl md:text-3xl font-medium text-accent-500 mb-8">

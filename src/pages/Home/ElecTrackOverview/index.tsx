@@ -3,7 +3,7 @@ import { Images } from "../../../assets";
 
 export default function ElecTrackOverviewPage() {
   return (
-    <div className="relative w-full px-0 lg:px-0 mb-12">
+    <div className="relative w-full px-0 lg:px-0 ">
       <img
         src={Images.BackgroundImage}
         alt="Background Image"
